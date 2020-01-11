@@ -47,4 +47,22 @@ public class DataRep {
         return allComapnies;
     }
 
+    public Customer[] resizeCustomerBase(){
+        //System.out.println(customerBase.length);
+        //System.out.println(listSize);
+        Customer[] tmp=new Customer[listSize+1];
+        for (int i=0; i<listSize;i++){ tmp[i]=customerBase[i];}
+        customerBase=tmp;
+        listSize+=1;
+        //System.out.println(customerBase.length);
+        //System.out.println(listSize);
+        return customerBase;
+    }
+
+    public void addToCustomerBase(Customer customer){
+        customerBase[listSize-1]=customer;
+    };
+
+
+
 }//eoc

@@ -9,8 +9,8 @@ public class Menu {
         prl("1 - Show all Customers in the TelBook ");
         prl("2 - Show all Persons in the TelBook ");
         prl("3 - Show all Companies in the TelBook ");
-        prl("4 - Search ");
-        prl("5 - Add new customer");
+        prl("4 - Search for ... ");
+        prl("5 - Add new ...");
         prl("9 - EXIT\n");
 
         prl(" press number to choose action:");
@@ -79,7 +79,6 @@ public class Menu {
 
     private static void addCustomer() {
     }
-
 
     public static void prl(Object o) {System.out.println(o);}
 

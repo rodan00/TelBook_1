@@ -6,7 +6,7 @@ public class Add {
         prl("\n   TELBOOK - Add new Customer:");
         prl("     ---------------------------");
         prl("1 - Add Person");
-        prl("2 - Search Company");
+        prl("2 - Add Company");
         prl("9 - Exit Search (back to Main Menu)");
         prl(" press number to choose action:");
 
@@ -31,22 +31,21 @@ public class Add {
     }
 
         private static void addPerson(){
-        prl("page under cosnstruction");
+        DataRep.getBaza().resizeCustomerBase();
+        Person newPerson=new Person("John","Smith","007007007");
+        DataRep.getBaza().addToCustomerBase(newPerson);
+            prl("New PERSON added ");
         }
+
         private static void addCompany(){
-             prl("page under cosnstruction");
+        DataRep.getBaza().resizeCustomerBase();
+        Company newCompany=new Company("LOT Airlines","997997997");
+            DataRep.getBaza().addToCustomerBase(newCompany);
+            prl("New COMPANY added ");
          }
+
         public static void prl(Object o){
         System.out.println(o);
     }
-
-
-
-
-
-
-
-
-
 
 }

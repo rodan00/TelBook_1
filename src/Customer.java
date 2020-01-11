@@ -1,12 +1,12 @@
 public class Customer {
 
-    private String idtype;
-    private String phoneNumber="997";
-    private String street="Java";
-    private String homeNumber="1.8";
-    private String zipCode="11-111";
-    private String city="Cracow";
-    private String country="Poland";
+    String idtype;
+    String phoneNumber="997";
+    String street="Java";
+    String homeNumber="1.8";
+    String zipCode="11-111";
+    String city="Cracow";
+    String country="Poland";
 
     public Customer(){
         idtype="CUSTOMER";

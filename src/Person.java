@@ -25,10 +25,22 @@ public class Person extends Customer {
                   String city,
                   String country) {
         super(phoneNumber, street, homeNumber, zipCode, city, country);
-        idtype="Person";
+        idtype="PERSON";
         this.firstName = firstName;
         this.surName = surName;
     }
+
+    public Person(String firstName,
+                  String surName,
+                  String phoneNumber)
+      {
+        super();
+        idtype="PERSON";
+        this.firstName = firstName;
+        this.surName = surName;
+        this.phoneNumber=phoneNumber;
+    }
+
 
     public String getFirstName() {
         return firstName;

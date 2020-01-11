@@ -23,9 +23,19 @@ public class Company extends Customer{
                     String city,
                     String country) {
         super(phoneNumber,street,homeNumber,zipCode,city,country);
-        idtype="Customer";
+        idtype="CUSTOMER";
         this.companyName = companyName;
     }
+
+    public Company (
+            String companyName,
+            String phoneNumber)
+    {
+        super();
+        idtype="CUSTOMER";
+        this.companyName = companyName;
+    }
+
 
     public String getInfo() {
         StringBuilder builder = new StringBuilder();
