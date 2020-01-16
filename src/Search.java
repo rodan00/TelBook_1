@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.Scanner;
 
 class Search {
@@ -5,7 +6,7 @@ class Search {
 
     public static void showSearchMenu() {
         prl("\n   TELBOOK - Search Menu:");
-        prl("     ---------------------_-");
+        prl("     ----------------------");
         prl("1 - Search phone number - by Person first name ");
         prl("2 - Search phone number - by Person surname name ");
         prl("3 - Search phone number - by Company name ");
@@ -39,6 +40,7 @@ class Search {
                 prl("\n\n");
                 prl("choice out of menu list - try again");
                 prl("\n");
+                showSearchMenu();
           }
 }
 
@@ -47,7 +49,7 @@ static void findByFirstName() {
         boolean isfound = false;
         int counter = 1;
         String search = getInput();
-        Person[] allPersons = DataRep.getBaza().getAllPersons();
+        ArrayList<Person> allPersons = DataRep.getBaza().getAllPersons();
         prl(" Searching for: " + search);
         for (Person person : allPersons) {
             if (person != null) {
@@ -69,7 +71,7 @@ static void findByFirstName() {
         boolean isfound = false;
         int counter = 1;
         String search = getInput();
-        Person[] allPersons = DataRep.getBaza().getAllPersons();
+        ArrayList<Person> allPersons = DataRep.getBaza().getAllPersons();
         prl(" Searching for: " + search);
         for (Person person : allPersons) {
             if (person != null) {
@@ -90,7 +92,7 @@ static void findByFirstName() {
         boolean isfound=false;
         int counter=1;
         String search = getInput();
-        Customer[] allCustomers = DataRep.getBaza().getAllCustomers();
+        ArrayList<Customer> allCustomers = DataRep.getBaza().getAllCustomers();
         prl(" Searching for: "+search);
         for (Customer customer : allCustomers) {
             if(customer!=null){
@@ -108,11 +110,12 @@ static void findByFirstName() {
 
 
     static void findByCompanyName() {
-        prl(" Search: Please enter Company came:");
+        prl(" Search: Please enter Company name:");
         boolean isfound=false;
         int counter=1;
         String search = getInput();
-        Company[] allCompanies = DataRep.getBaza().getAllCompanies();
+//!        Company[] allCompanies = DataRep.getBaza().getAllCompanies();
+        ArrayList<Company> allCompanies = DataRep.getBaza().getAllCompanies();
         prl(" Searching for: "+search);
         for (Company company : allCompanies) {
             if(company!=null){

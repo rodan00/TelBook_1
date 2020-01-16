@@ -27,18 +27,19 @@ public class Add {
                 prl("\n\n");
                 prl("choice out of menu list - try again");
                 prl("\n");
+                showAddMenu();
         }
     }
 
         private static void addPerson(){
-        DataRep.getBaza().resizeCustomerBase();
+//!        DataRep.getBaza().resizeCustomerBase();
         Person newPerson=new Person("John","Smith","007007007");
         DataRep.getBaza().addToCustomerBase(newPerson);
             prl("New PERSON added ");
         }
 
         private static void addCompany(){
-        DataRep.getBaza().resizeCustomerBase();
+//!        DataRep.getBaza().resizeCustomerBase();
         Company newCompany=new Company("LOT Airlines","997997997");
             DataRep.getBaza().addToCustomerBase(newCompany);
             prl("New COMPANY added ");
